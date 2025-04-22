@@ -1,0 +1,141 @@
+/* ==================== STYLE NAVBAR ==================== */
+.navbar {
+    height: 4em;
+    width: 100%;
+    background-color: #2d2d2d;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+}
+
+/* NAVBAR-Logo */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-image {
+    width: 6em;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar-logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* NAVBAR-Menu */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu-item {
+    margin: 0 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 10px;
+}
+
+.navbar-menu-item a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Submenu Styles */
+.navbar-menu-item.has-submenu {
+    position: relative;
+    height: 4em;
+}
+
+.submenu {
+    position: fixed;
+    top: 4em;
+    left: 0;
+    width: 100vw;
+    background-color: #3a3a3a;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center; /* Centering the submenu content horizontally */
+    z-index: 4;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.has-submenu:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Submenu Content */
+.submenu-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+}
+
+/* Submenu Display Product */
+.submenu-display-product {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Submenu Category */
+.submenu-category {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding: 20px;
+    width: 200px;
+}
+
+/* Submenu Title */
+.submenu-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Submenu Items */
+.submenu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu-items li {
+    padding: 5px 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.submenu-items li:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
