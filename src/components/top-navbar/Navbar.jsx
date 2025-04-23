@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import { useState } from "react";
 import { FaAngleRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom'
 
 import images_logo from "../../assets/logo/Chery_logo.png";
 import omoda_j6 from "../../assets/cars/omoda/OMODA-J6.webp";
@@ -116,7 +117,7 @@ const Navbar = () => {
                 <h1 className="navbar-logo-text">Chery-Sukajadi</h1>
             </div>
             <ul className="navbar-menu">
-                <li className="navbar-menu-item"><a href="#">Home</a></li>
+                <li className="navbar-menu-item"><a href="/"><Link to="/">Home</Link></a></li>
                 <li className="navbar-menu-item has-submenu">
                     <a href="#">Models</a>
                     <div className="submenu">
