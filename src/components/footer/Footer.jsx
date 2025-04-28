@@ -34,11 +34,11 @@ const Container_Footer = () => {
                 </div>
                 <div className="footer-detail">
                     <div className="footer-detail-left">
-                        <div className="footer-detail-title">Kantor Pusat</div>
+                        <div className="footer-detail-title">Kantor Chery Inti Bandung</div>
                             <div className="footer-detail-address">
-                            <p>Jl. Wolter Monginsidi No.97, RT.1/RW.4, Rawa Barat, Kec. Kebayoran Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12180</p>
+                            <p>Jl. Dr. Setiabudi No.65, Gegerkalong, Kec. Sukasari, Kota Bandung, Jawa Barat 40153</p>
                             <a 
-                                href="https://maps.google.com/?q=Jl. Wolter Monginsidi No.97, Jakarta" 
+                                href="https://maps.google.com/?q=Dealer+Chery+Inti+Mobil+Bandung" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="footer-link"
