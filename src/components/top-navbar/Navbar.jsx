@@ -16,6 +16,7 @@ import tiggo_8 from "../../assets/cars/tiggo/TIGGO-8.webp";
 import tiggo_cross from "../../assets/cars/tiggo/TIGGO-CROSS.webp";
 
 import Contact from "../../pages/contact/Contact";
+import Services from "../../pages/list-services/Services";
 
 const Navbar = () => {
     const carData = {
@@ -191,7 +192,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </li>
-                <li className="navbar-menu-item"><a href="#">Services</a></li>
+                <li className="navbar-menu-item"><Link to="/list-services">Services</Link></li>
                 <li className="navbar-menu-item"><Link to="/contact">Contact</Link></li>
             </ul>
         </nav>
