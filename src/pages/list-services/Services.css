@@ -10,9 +10,7 @@
   
 .section-services {
     width: 100%;
-    max-width: 90%;
     padding: 3rem;
-    /* background-color: aquamarine; */
     position: relative;
 }
 
@@ -24,7 +22,7 @@
 .services-header h2 {
     font-size: 2.5em;
     color: #ffffff;
-    font-weight: 600;
+    font-weight: bold;
     text-transform: uppercase;
 }
   
@@ -33,7 +31,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    /* background-color: red;     */
+    height: 100%;
 }
   
 .hex-button-services {
@@ -73,6 +71,7 @@
     z-index: 2;
     position: relative;
     color: white;
+    font-size: 18px;
     transition: transform 0.3s ease;
 }
   
@@ -91,6 +90,7 @@
 }
   
 .services-cards {
+    height: 100%;
     display: flex;
     gap: 2rem;
     overflow-x: auto;
@@ -108,7 +108,8 @@
 
 .service-card {
     flex: 0 0 auto;
-    width: 400px;
+    width: 31.6%;
+    height: 95%;
     background-color: transparent;
     padding: 1rem;
     border: 2px solid #dbdbdb;
@@ -126,7 +127,7 @@
   
 .service-image-wrapper {
     width: 100%;
-    height: 60vh;
+    height: 90%;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -151,18 +152,17 @@
     color: #ffffff;
 }
   
-  /* Animation */
-  @keyframes fadeUp {
+/* Animation */
+@keyframes fadeUp {
     0% {
-      opacity: 0;
-      transform: translateY(40px);
+        opacity: 0;
+        transform: translateY(40px);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
+}  
 
 .container-promotion {
     display: flex;
@@ -170,8 +170,6 @@
     background: linear-gradient(to bottom, #2d2d2d, #1a1a1a);
     padding: 4rem 0;
     width: 100%;
-    min-height: 95vh;
-    /* border-top:2px solid white ; */
 }
 
 .section-promotion {
@@ -180,7 +178,6 @@
     width: 90%;
     flex-wrap: wrap;
     justify-content: center;
-    /* background-color: rgb(23, 222, 149); */
 }
 
 .head-promotion {
@@ -192,7 +189,7 @@
 .head-promotion h2 {
     font-size: 2.5em;
     color: #ffffff;
-    font-weight: 600;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -227,13 +224,13 @@
 
 .promotion-card h3 {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.2em;
     margin-bottom: 0.5rem;
 }
 
 .promotion-card p {
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 /* === Guaranted Service === */
@@ -241,54 +238,52 @@
     display: flex;
     justify-content: center;
     background: linear-gradient(to bottom, #1a1a1a, #000000);
-    padding: 4rem 0;
+    padding: 2rem 0;
     width: 100%;
     min-height: 90vh;
   }
   
-  .container-guaranted {
+.container-guaranted {
     width: 90%;
-    max-width: 1500px;
-    /* background-color: red; */
-  }
+}
   
-  .head-guaranted-service {
+.head-guaranted-service {
     text-align: center;
     margin-bottom: 2rem;
-  }
+}
   
-  .head-guaranted-service h2 {
+.head-guaranted-service h2 {
     font-size: 2.5rem;
     color: #ffffff;
-    font-weight: 600;
+    font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
-  }
+}
   
-  .underline {
+.underline {
     width: 150px;
     height: 4px;
     background-color: #ffffff;
     margin: 0 auto;
     border-radius: 2px;
-  }
-  .guaranted-image {
+}
+.guaranted-image {
     width: 100%;
     min-height: 200px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
 }
-  .body-guaranted-service {
+.body-guaranted-service {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     margin-top: 3rem;
     /* background-color: blue; */
-  }
+}
   
-  .guaranted-card {
+.guaranted-card {
     background-color: transparent;
     border: 2px solid #ffffff;
     border-radius: 10px;
@@ -296,87 +291,85 @@
     padding: 1.5rem;
     text-align: left;
     transition: transform 0.3s ease;
-  }
+}
   
-  .guaranted-card:hover {
+.guaranted-card:hover {
     transform: translateY(-10px);
-  }
+}
   
-  .guaranted-card h3 {
+.guaranted-card h3 {
     color: #ffffff;
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin-bottom: 1rem;
     font-weight: 400;
-  }
+}
   
-  .guaranted-card p {
+.guaranted-card p {
     color: #dddddd;
     font-size: 1em;
     line-height: 1.6;
     margin-bottom: 1rem;
-  }
+}
   
-  .guaranted-card ul {
+.guaranted-card ul {
     list-style-type: disc;
     margin-left: 1.5rem;
     margin-top: 0.5rem;
-  }
+}
   
-  .guaranted-card ul li {
+.guaranted-card ul li {
     color: #cccccc;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-  }
+}
 
 
-  /* === Six Star Service === */
+/* === Six Star Service === */
 
-  .six-star-service {
+.six-star-service {
     display: flex;
     justify-content: center;
-    background: linear-gradient(to bottom, #1a1a1a, #000);    
-    /* background-color: blue; */
+    background: linear-gradient(to bottom, #1a1a1a, #000);
     padding: 4rem 0;
     width: 100%;
     min-height: 100vh;
-  }
+}
   
-  .container-six-star-service {
+.container-six-star-service {
     width: 90%;
     max-width: 1500px;
-    /* background-color: blanchedalmond; */
-  }
+}
   
-  .head-six-star-service {
+.head-six-star-service {
     text-align: center;
     margin-bottom: 2rem;
-  }
+}
   
-  .head-six-star-service h2 {
+.head-six-star-service h2 {
     font-size: 2.5rem;
     color: #fff;
-    font-weight: 600;
+    font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
-  }
+}
   
-  .head-six-star-service .underline {
+.head-six-star-service .underline {
     width: 100px;
     height: 4px;
     background-color: #fff;
     margin: 0 auto;
     border-radius: 2px;
-  }
+}
   
-  .body-six-star-service {
+.body-six-star-service {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     margin-top: 2rem;
-  }
+}
   
-  .six-star-card {
+.six-star-card {
     background-color: #000000;
     border: 2px solid #fff;
     border-radius: 10px;
@@ -385,39 +378,183 @@
     text-align: left;
     position: relative;
     transition: transform 0.3s ease;
-  }
+}
   
-  .six-star-card:hover {
+.six-star-card:hover {
     transform: translateY(-10px);
-  }
+}
   
-  .icon-wrapper {
+.icon-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem;
-    /* background-color: red; */
-  }
+}
   
-  .icon {
+.icon {
     font-size: 6rem;
     color: #fff;
-  }
+}
   
   
-  .six-star-card h3 {
+.six-star-card h3 {
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: 1rem;
     text-transform: uppercase;
     text-align: center;
-  }
+}
   
-  .six-star-card p {
+.six-star-card p {
     font-size: 1rem;
     color: #ddd;
     line-height: 1.6;
     text-align: center;
-  }
+}
 
-  
+@media screen and (max-width: 1024px) {
+    .service-card {
+        width: 47%;
+    }
+
+    .guaranted-card {
+        width: 45%; 
+    }
+    
+    .guaranted-card:nth-child(3) {
+        width: 50%;
+    }
+
+    .six-star-card h3 {
+        font-size: 1.1em;
+    }
+
+    .six-star-card p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services-header h2 {
+        font-size: 2em;
+    }
+
+    .head-promotion h2 {
+        font-size: 2em;
+    }
+
+    .head-guaranted-service h2 {
+        font-size: 2em;
+    }
+
+    .head-six-star-service h2 {
+        font-size: 2em;
+    }
+
+    .service-description h3 {
+        font-size: 1.2em;
+    }
+
+    .body-promotion {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .promotion-card {
+        width: 100%;
+    }
+
+    .promotion-card h3 {
+        font-size: 1.3em;
+    }
+
+    .promotion-card p {
+        font-size: 1em;
+    }
+
+    .guaranted-card {
+        width: 70%; 
+    }
+    
+    .guaranted-card:nth-child(3) {
+        width: 70%;
+    }
+
+    .guaranted-card h3 {
+        font-size: 1.4em;
+    }
+
+    .guaranted-card p {
+        font-size: 0.9em;
+    }
+
+    .six-star-card {
+        width: 45%;
+    }
+
+    .icon {
+        font-size: 4rem;
+        color: #fff;
+    }
+
+    .six-star-card h3 {
+        font-size: 1em;
+    }
+
+    .six-star-card p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .service-card {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-header h2 {
+        font-size: 1.4em;
+    }
+
+    .head-promotion h2 {
+        font-size: 1.4em;
+    }
+
+    .head-guaranted-service h2 {
+        font-size: 1.4rem;
+    }
+
+    .head-six-star-service h2 {
+        font-size: 1.4rem;
+    }
+
+    .section-services {
+        padding: 1rem;
+    }
+
+    .services-header {
+        margin-bottom: 1rem;
+    }
+
+    .hex-button-services.left {
+        left: 0px;
+    }
+      
+    .hex-button-services.right {
+        right: 0px;
+    }
+
+    .guaranted-card {
+        width: 90%; 
+    }
+    
+    .guaranted-card:nth-child(3) {
+        width: 90%;
+    }
+
+    .six-star-card {
+        width: 90%;
+    }
+}

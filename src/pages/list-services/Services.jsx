@@ -34,13 +34,13 @@ const ContainerServices = () => {
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: -400, behavior: 'smooth' });
     }
   };
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: 400, behavior: 'smooth' });
     }
   };
 
@@ -64,7 +64,7 @@ const ContainerServices = () => {
 
           <div className="services-wrapper">
             <button className="hex-button-services left" onClick={scrollLeft}>
-              <FaChevronLeft className='icon-swipe-service' size={18} />
+              <FaChevronLeft className='icon-swipe-service'/>
             </button>
 
             <div className="services-cards" ref={scrollContainerRef}>
