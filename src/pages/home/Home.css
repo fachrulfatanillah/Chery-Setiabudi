@@ -332,7 +332,7 @@
     position: relative;
     width: 65px;
     height: 55px;
-    background-color: white;
+    background-color: rgb(178, 178, 178);
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -366,7 +366,7 @@
 }
   
 .main-content-home-section-list-product-hexagon-icon:hover {
-    background-color: #333;
+    background-color: #ffffff;
 }
 
 .main-content-home-section-list-product-hexagon-icon:hover .hex-icon-text {
@@ -513,6 +513,16 @@
     .home-section-list-product-card-button-wrapper-btn-detail .text-underline {
         border-bottom: 1.6px solid black;
         padding-bottom: 1px;
+    }
+
+    .main-content-home-section-list-product-hexagon-icon {
+        width: 55px;
+        height: 45px;
+    }
+
+    .main-content-home-section-list-product-hexagon-icon::before {
+        width: calc(90% + 3px);
+        height: calc(90% + 3px);
     }
 
 }
