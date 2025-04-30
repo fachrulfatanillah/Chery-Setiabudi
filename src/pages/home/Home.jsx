@@ -37,21 +37,15 @@ const Container_Home = ({}) => {
 
     const scroll = (direction) => {
         if (scrollRef.current) {
-        const scrollAmount = scrollRef.current.offsetWidth / carList.length; // Menghitung lebar scroll per card
-
-        if (direction === "left") {
-            // Geser ke kiri
-            const newIndex = currentIndex === 0 ? carList.length - 1 : currentIndex - 1;
-            setCurrentIndex(newIndex);
-            scrollRef.current.scrollLeft = newIndex * scrollAmount; // Langsung ke card yang sesuai
-        } else {
-            // Geser ke kanan
-            const newIndex = currentIndex === carList.length - 1 ? 0 : currentIndex + 1;
-            setCurrentIndex(newIndex);
-            scrollRef.current.scrollLeft = newIndex * scrollAmount; // Langsung ke card yang sesuai
+          const card = scrollRef.current.querySelector(".main-content-home-section-list-product-card");
+          const scrollAmount = card ? card.offsetWidth + 65 : 400;
+      
+          scrollRef.current.scrollBy({
+            left: direction === "left" ? -scrollAmount : scrollAmount,
+            behavior: "smooth",
+          });
         }
-        }
-    };
+      };
 
 
     return (
@@ -108,7 +102,7 @@ const Container_Home = ({}) => {
                                     <div className="home-section-list-product-card-price">
                                         <div className="price-info">
                                             <span>Harga :</span>
-                                            <p>Mulai Dari</p>
+                                            <p>Mulai Dari*</p>
                                         </div>
                                         <span className="price-amount">IDR 500.000.000</span>
                                     </div>
