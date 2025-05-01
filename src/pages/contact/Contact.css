@@ -43,16 +43,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .contact-profile-photo-container {
-  flex: 0 0 auto;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-profile-photo {
-  width: 300px;
+  width: 100%;
   height: auto;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -166,4 +169,107 @@
 .contact-icon-text {
   font-size: 1em;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-profile-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-details {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-badge-container,
+  .contact-icons {
+    justify-content: center;
+  }
+
+  .contact-right {
+    min-width: 90%;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-profile-photo-container {
+    max-width: 250px;
+  }
+
+  .contact-profile-photo {
+    max-width: 250px;
+  }
+
+  .contact-name-large {
+    font-size: 2em;
+  }
+
+  .contact-intro-text,
+  .contact-job-title {
+    font-size: 1.2em;
+  }
+
+  .contact-icon-text {
+    font-size: 0.95em;
+  }
+
+  .contact-address {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-section {
+    padding: 20px 10px;
+  }
+
+  .contact-right {
+    padding: 20px;
+    min-width: 95%;
+  }
+
+  .contact-profile-photo-container {
+    max-width: 200px;
+  }
+
+  .contact-profile-photo {
+    max-width: 200px;
+  }
+
+  .contact-name-large {
+    font-size: 1.7em;
+  }
+
+  .contact-intro-text,
+  .contact-job-title {
+    font-size: 1em;
+  }
+
+  .contact-badge {
+    font-size: 0.9em;
+    padding: 5px 10px;
+  }
+
+  .contact-address {
+    font-size: 0.95em;
+  }
+
+  .contact-icon-text {
+    font-size: 0.9em;
+  }
+
+  .contact-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contact-icon-link {
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+  }
 }
