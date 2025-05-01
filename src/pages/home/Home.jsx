@@ -3,8 +3,6 @@ import React, { useState, useRef } from "react";
 
 import images_tiggo_logo from "../../assets/logo/Tiggo-Logo.webp";
 import images_omoda_logo from "../../assets/logo/Omoda-Logo.webp";
-import hero_vidio_tiggo from "../../../public/vidio/chery-tiggo-homepage-desktop.mp4";
-import hero_vidio_omoda from "../../../public/vidio/chery-omoda-homepage-desktop.mp4";
 
 import images_logo from "../../assets/logo/Chery_logo.png";
 import omoda_j6 from "../../assets/cars/omoda/OMODA-J6.webp";
@@ -53,7 +51,7 @@ const Container_Home = ({}) => {
             <div className="hero-section-home">
                 <div className="hero-left-section">
                     <video className="hero-video" autoPlay loop muted>
-                        <source src={hero_vidio_tiggo} type="video/mp4" />
+                        <source src="vidio/chery-tiggo-homepage-desktop.mp4" type="video/mp4" />
                     </video>
                     <div className="hero-video-button-wrapper">
                         <button className="home-wrapper-hero-button">
@@ -63,7 +61,7 @@ const Container_Home = ({}) => {
                 </div>
                 <div className="hero-right-section">
                     <video className="hero-video" autoPlay loop muted>
-                            <source src={hero_vidio_omoda} type="video/mp4" />
+                            <source src="vidio/chery-omoda-homepage-desktop.mp4" type="video/mp4" />
                     </video>
                     <div className="hero-video-button-wrapper">
                         <button className="home-wrapper-hero-button">
