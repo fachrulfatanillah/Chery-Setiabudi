@@ -1,6 +1,6 @@
 import "./Navbar.css";
-import { useState } from "react";
-import { FaAngleRight } from 'react-icons/fa';
+import { useState, useEffect } from "react";
+import { FaAngleRight, FaChevronDown, FaChevronUp, FaChevronRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 
 import images_logo from "../../assets/logo/Chery_logo.png";
@@ -106,6 +106,25 @@ const Navbar = () => {
     const [selectedModel, setSelectedModel] = useState("J6");
     const [selectedImage, setSelectedImage] = useState(carData["J6"].image);
     const [spec, setSpec] = useState(carData["J6"].specs);
+
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [showModelOverlay, setShowModelOverlay] = useState(false);
+    const [closingOverlay, setClosingOverlay] = useState(false);
+
+    const [openDropdown, setOpenDropdown] = useState(null);
+
+    const toggleDropdown = (type) => {
+    setOpenDropdown((prev) => (prev === type ? null : type));
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    const closeMenu = () => {
+        setMenuOpen(false);
+        setShowModelOverlay(false)
+    };
     
     const handleImageChange = (model) => {
         setSelectedModel(model);
@@ -117,12 +136,13 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-logo">
                 <img className="navbar-logo-image" src={images_logo} alt="" />
-                <h1 className="navbar-logo-text">Chery-Sukajadi</h1>
+                <h1 className="navbar-logo-text">Chery-Setiabudi</h1>
             </div>
-            <ul className="navbar-menu">
-                <li className="navbar-menu-item"><a href="/"><Link to="/">Home</Link></a></li>
+            <button className={`menu-toggle ${menuOpen ? "show" : ""}`} onClick={toggleMenu}></button>
+            <ul className={`navbar-menu ${menuOpen ? "show" : ""}`}>
+                <li className="navbar-menu-item"><Link to="/">Home</Link></li>
                 <li className="navbar-menu-item has-submenu">
-                    <a href="#">Models</a>
+                    <a>Models</a>
                     <div className="submenu">
                         <div className="submenu-content">
                             {/* Left Section for Product Display */}
@@ -194,9 +214,78 @@ const Navbar = () => {
                         </div>
                     </div>
                 </li>
+                <li className="navbar-menu-item mobile-only">
+                    <button onClick={() => setShowModelOverlay(true)} className="models-mobile-button">
+                        Models <FaChevronRight />
+                    </button>
+                </li>
                 <li className="navbar-menu-item"><Link to="/list-services">Services</Link></li>
                 <li className="navbar-menu-item"><Link to="/contact">Contact</Link></li>
             </ul>
+            <div className={`overlay ${menuOpen ? "show" : ""}`} onClick={closeMenu}></div>
+            {showModelOverlay && (
+            <div className={`model-overlay ${closingOverlay ? 'slide-out' : 'slide-in'}`}>
+                <div className="model-overlay-header">
+                    <button
+                        onClick={() => {
+                            setClosingOverlay(true);
+                            setTimeout(() => {
+                            setShowModelOverlay(false);
+                            setClosingOverlay(false);
+                            }, 300);
+                        }}
+                        className="back-button"
+                        >
+                        ← Tutup
+                    </button>
+                </div>
+
+                <div className="model-overlay-content">
+                <div className="submenu-dropdown-group">
+                {/* OMODA */}
+                <div className="submenu-category-dropdown">
+                    <div className="submenu-title clickable" onClick={() => toggleDropdown("omoda")}>
+                    OMODA{" "}
+                    {openDropdown === "omoda" ? (
+                        <FaChevronUp className="dropdown-arrow" />
+                    ) : (
+                        <FaChevronDown className="dropdown-arrow" />
+                    )}
+                    </div>
+                    {openDropdown === "omoda" && (
+                    <ul className="submenu-items-mobile">
+                        <li onClick={() => handleImageChange("J6")}>J6</li>
+                        <li onClick={() => handleImageChange("OMODA E5")}>OMODA E5</li>
+                        <li onClick={() => handleImageChange("OMODA 5 GT")}>OMODA 5 GT</li>
+                        <li onClick={() => handleImageChange("OMODA 5")}>OMODA 5</li>
+                    </ul>
+                    )}
+                </div>
+
+                {/* TIGGO */}
+                <div className="submenu-category-dropdown">
+                    <div className="submenu-title clickable" onClick={() => toggleDropdown("tiggo")}>
+                    TIGGO{" "}
+                    {openDropdown === "tiggo" ? (
+                        <FaChevronUp className="dropdown-arrow" />
+                    ) : (
+                        <FaChevronDown className="dropdown-arrow" />
+                    )}
+                    </div>
+                    {openDropdown === "tiggo" && (
+                    <ul className="submenu-items-mobile">
+                        <li onClick={() => handleImageChange("TIGGO CROSS")}>TIGGO CROSS</li>
+                        <li onClick={() => handleImageChange("TIGGO 8")}>TIGGO 8</li>
+                        <li onClick={() => handleImageChange("TIGGO 8 PRO MAX")}>TIGGO 8 PRO MAX</li>
+                        <li onClick={() => handleImageChange("TIGGO 8 PRO")}>TIGGO 8 PRO</li>
+                        <li onClick={() => handleImageChange("TIGGO 7 PRO")}>TIGGO 7 PRO</li>
+                    </ul>
+                    )}
+                </div>
+                </div>
+                </div>
+            </div>
+            )}
         </nav>
     );
 };

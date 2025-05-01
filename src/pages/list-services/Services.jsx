@@ -34,22 +34,21 @@ const ContainerServices = () => {
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: -326, behavior: 'smooth' });
     }
   };
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: 326, behavior: 'smooth' });
     }
   };
 
   const services = [
-    { title: 'Web Design', image: '/src/assets/background/BackgroundContact.webp' },
-    { title: 'App Development', image: '/src/assets/background/BackgroundContact.webp' },
-    { title: 'SEO Optimization', image: '/src/assets/background/BackgroundContact.webp' },
-    { title: 'UI/UX Design', image: '/src/assets/background/BackgroundContact.webp' },
-    { title: 'Backend API', image: '/src/assets/background/BackgroundContact.webp' },
+    { title: 'TIGGO CROS', image: '/src/assets/sale/Sale-1.webp' },
+    { title: 'J6', image: '/src/assets/sale/Sale-2.webp' },
+    { title: 'OMODA E5', image: '/src/assets/sale/Sale-3.webp' },
+    { title: 'J6', image: '/src/assets/sale/Sale-4.webp' },
   ];
 
   return (
@@ -64,7 +63,8 @@ const ContainerServices = () => {
 
           <div className="services-wrapper">
             <button className="hex-button-services left" onClick={scrollLeft}>
-              <FaChevronLeft className='icon-swipe-interior' size={18} />
+
+              <FaChevronLeft className='icon-swipe-service'/>
             </button>
 
             <div className="services-cards" ref={scrollContainerRef}>
