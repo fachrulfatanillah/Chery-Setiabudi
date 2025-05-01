@@ -1,7 +1,7 @@
 .contact-container {
   display: flex;
   justify-content: center;
-  background-color: #2d2d2dd3;
+  background-color: #5f5f5fd3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-top: 4em;
   min-width: 100%;
@@ -30,10 +30,11 @@
 .contact-right {
   position: relative;
   z-index: 2;
-  background-color: #ffffffd7;
+  background-color: #2d2d2ddb;
+  border: 1px solid #ffffff;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(59, 59, 59, 0.2);
   min-width: 70%;
   text-align: center;
 }
@@ -70,13 +71,13 @@
 .contact-job-title {
   margin-top: 12px;
   font-size: 1.5em;
-  color: #333;
+  color: #ffffff;
 }
 
 .contact-name-large {
   font-size: 2.3em;
   font-weight: 800;
-  color: #000;
+  color: #ffffff;
   margin: 10px 0;
 }
 
@@ -95,17 +96,18 @@
   font-size: 1em;
   padding: 6px 12px;
   border-radius: 12px;
-  font-weight: 500;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .badge-star {
-  background: #2d2d2d;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
 }
 
 .badge-cert {
-  background: #2d2d2d;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
 }
 
 .contact-location {
@@ -113,14 +115,14 @@
   text-transform: uppercase;
   text-decoration: underline;
   font-size: 1em;
-  color: #111;
+  color: #ffffff;
   margin: 12px 0 8px 0;
 }
 
 .contact-address {
   margin: 5px 0 10px 0;
   font-size: 1.1em;
-  color: #3d3d3d;
+  color: #ffffff;
   max-width: 500px;
 }
 
@@ -141,7 +143,7 @@
   background-color: transparent;
   transition: all 0.3s ease;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -152,11 +154,13 @@
 }
 
 .contact-icon-link:hover:nth-child(1) {
-  background-color: #25D3661a;
+  background-color: #747474;
+  color: #ffffff;
 }
 
 .contact-icon-link:hover:nth-child(2) {
-  background-color: #D446381a;
+  background-color: #747474;
+  color: #ffffff;
 }
 
 .contact-icon-text {

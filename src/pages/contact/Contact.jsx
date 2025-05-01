@@ -40,7 +40,7 @@ const Container_Contact = () => {
 
               <div className="contact-badge-container">
                 <span className="contact-badge badge-star">
-                  <FaStar color="#f4c150" /> <strong>Excellent</strong> (2)
+                  <FaStar color="#2d2d2d" />Excellent
                 </span>
                 <span className="contact-badge badge-cert">
                   CERTIFIED <FaCheckCircle />
@@ -60,7 +60,7 @@ const Container_Contact = () => {
                   className="contact-icon-link"
                   title="WhatsApp"
                 >
-                  <FaWhatsapp size={28} color="#25D366" />
+                  <FaWhatsapp size={28} color="#ffffff" />
                   <span className="contact-icon-text">+62 881-0802-48215</span>
                 </a>
 
@@ -69,7 +69,7 @@ const Container_Contact = () => {
                   className="contact-icon-link"
                   title="Email"
                 >
-                  <FaEnvelope size={28} color="#D44638" />
+                  <FaEnvelope size={28} color="#ffffff" />
                   <span className="contact-icon-text">mfaarellrafi@gmail.com</span>
                 </a>
               </div>

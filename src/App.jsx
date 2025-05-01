@@ -6,6 +6,7 @@ import Contact from './pages/contact/Contact'
 import Services from './pages/list-services/Services'
 import Footer from './components/footer/Footer'
 import WhatsAppButton from './components/whatsapp/WhatsAppButton'
+import Detail_Model_Produk from './pages/detail-model-produk/Detail-Model-Produk'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/list-services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/detail-model-produk" element={<Detail_Model_Produk />} />
       </Routes>
       <WhatsAppButton />
       <Footer/>

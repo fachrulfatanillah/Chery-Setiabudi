@@ -154,15 +154,17 @@ const Navbar = () => {
                                             {/* Bisa isi teks, info singkat, atau dikosongin */}
                                         </div>
                                         <div className="detail-right-button">
-                                            <button className="detail-button">
+                                            <Link to="/detail-model-produk" className="detail-button">
                                                 <div className="button-content">
-                                                    <div className="hexagon-icon"><FaAngleRight className="hexagon-icon-angle-right"/></div>
+                                                    <div className="hexagon-icon">
+                                                    <FaAngleRight className="hexagon-icon-angle-right" />
+                                                    </div>
                                                     <div className="button-text">
-                                                        <div className="product-name">{carData[selectedModel].product_name}</div>
-                                                        <div className="info-label">Detail Information</div>
+                                                    <div className="product-name">{carData[selectedModel].product_name}</div>
+                                                    <div className="info-label">Detail Information</div>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

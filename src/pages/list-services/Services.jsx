@@ -64,7 +64,7 @@ const ContainerServices = () => {
 
           <div className="services-wrapper">
             <button className="hex-button-services left" onClick={scrollLeft}>
-              <FaChevronLeft className='icon-swipe-service' size={18} />
+              <FaChevronLeft className='icon-swipe-interior' size={18} />
             </button>
 
             <div className="services-cards" ref={scrollContainerRef}>
