@@ -3,8 +3,8 @@ import React, { useState, useRef } from "react";
 
 import images_tiggo_logo from "../../assets/logo/Tiggo-Logo.webp";
 import images_omoda_logo from "../../assets/logo/Omoda-Logo.webp";
-import hero_vidio_tiggo from "../../assets/vidio/chery-tiggo-homepage-desktop.mp4";
-import hero_vidio_omoda from "../../assets/vidio/chery-omoda-homepage-desktop.mp4";
+import hero_vidio_tiggo from "../../../public/vidio/chery-tiggo-homepage-desktop.mp4";
+import hero_vidio_omoda from "../../../public/vidio/chery-omoda-homepage-desktop.mp4";
 
 import images_logo from "../../assets/logo/Chery_logo.png";
 import omoda_j6 from "../../assets/cars/omoda/OMODA-J6.webp";

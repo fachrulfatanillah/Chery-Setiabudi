@@ -4,6 +4,17 @@ import { FaChevronLeft, FaChevronRight, FaHandHoldingHeart  } from 'react-icons/
 import { HiOutlineDevicePhoneMobile, HiOutlineChatBubbleLeftRight  } from "react-icons/hi2";
 import { TbHomeCog, TbMoodHappy, TbClock24   } from "react-icons/tb";
 
+import banner_ommoda5 from "../../assets/background/BackgroundContact.webp";
+import garansi_mesin from "../../assets/purna-jual/garansi-mesin.webp";
+import garansi_unit from "../../assets/purna-jual/garansi-unit.webp";
+import service_gratis from "../../assets/purna-jual/servis-gratis.webp";
+
+import sale_1 from "../../assets/sale/Sale-1.webp";
+import sale_2 from "../../assets/sale/Sale-2.webp";
+import sale_3 from "../../assets/sale/Sale-3.webp";
+import sale_4 from "../../assets/sale/Sale-4.webp";
+import sale_5 from "../../assets/sale/Sale-5.webp";
+
 const Services = () => {
   return <ContainerServices />;
 };
@@ -45,10 +56,11 @@ const ContainerServices = () => {
   };
 
   const services = [
-    { title: 'TIGGO CROS', image: '/src/assets/sale/Sale-1.webp' },
-    { title: 'J6', image: '/src/assets/sale/Sale-2.webp' },
-    { title: 'OMODA E5', image: '/src/assets/sale/Sale-3.webp' },
-    { title: 'J6', image: '/src/assets/sale/Sale-4.webp' },
+    { title: 'TIGGO CROS', image: sale_1 },
+    { title: 'J6', image: sale_2 },
+    { title: 'OMODA E5', image: sale_3 },
+    { title: 'J6', image: sale_4 },
+    { title: 'OMODA E5', image: sale_5 },
   ];
 
   return (
@@ -106,13 +118,13 @@ const ContainerServices = () => {
 
             <div className="body-promotion">
                 <div className="promotion-card">
-                    <img src="/src/assets/background/BackgroundContact.webp" alt="Promotion 1" className="promotion-image" />
+                    <img src={banner_ommoda5} alt="Promotion 1" className="promotion-image" />
                     <h3>Promotion Title 1</h3>
                     <p>This is a description for promotion 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
 
                 <div className="promotion-card">
-                    <img src="/src/assets/background/BackgroundContact.webp" alt="Promotion 2" className="promotion-image" />
+                    <img src={banner_ommoda5} alt="Promotion 2" className="promotion-image" />
                     <h3>Promotion Title 2</h3>
                     <p>This is a description for promotion 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
@@ -132,19 +144,19 @@ const ContainerServices = () => {
                 <div className="body-guaranted-service">
                 
                     <div className="guaranted-card">
-                        <img src="/src/assets/purna-jual/garansi-mesin.webp" alt="Guarantee 1" className="guaranted-image" /> 
+                        <img src={garansi_mesin} alt="Guarantee 1" className="guaranted-image" /> 
                         <h3>Garansi Mesin</h3>
                         <p>PT Chery Sales Indonesia berkomitmen memberikan garansi 6 tahun atau 150.000 km untuk kerusakan unit akibat kesalahan produksi bagi seluruh pengguna Chery di Indonesia.</p>
                     </div>
 
                     <div className="guaranted-card">
-                        <img src="/src/assets/purna-jual/garansi-unit.webp" alt="Guarantee 1" className="guaranted-image" />
+                        <img src={garansi_unit} alt="Guarantee 1" className="guaranted-image" />
                         <h3>Garansi Unit</h3>
                         <p>PT Chery Sales Indonesia memberikan garansi khusus mesin selama 10 tahun atau 1.000.000 km untuk mesin seri TIGGO yang mengalami kerusakan akibat kesalahan produksi.</p>
                     </div>
 
                     <div className="guaranted-card">
-                        <img src="/src/assets/purna-jual/servis-gratis.webp" alt="Guarantee 1" className="guaranted-image" />
+                        <img src={service_gratis} alt="Guarantee 1" className="guaranted-image" />
                         <h3>Servis Gratis</h3>
                         <p>PT Chery Sales Indonesia menjamin layanan servis gratis di seluruh bengkel resmi Chery Indonesia selama 4 tahun atau 60.000 km bagi seluruh pengguna mobil Chery Indonesia.</p>
                     </div>

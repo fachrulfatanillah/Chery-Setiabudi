@@ -166,7 +166,7 @@
 }
 
 .container-promotion {
-    display: flex;
+    display: none;
     justify-content: center;
     background: linear-gradient(to bottom, #2d2d2d, #1a1a1a);
     /* background-color: aqua; */
