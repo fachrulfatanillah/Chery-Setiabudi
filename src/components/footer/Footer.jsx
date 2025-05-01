@@ -1,6 +1,6 @@
 import "./Footer.css"
 
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaInstagram, FaLinkedin  } from "react-icons/fa";
 import images_logo from "../../assets/logo/Chery_logo.png";
 
 const Footer = () => {
@@ -15,8 +15,8 @@ const Container_Footer = () => {
             <div className="container-footer">
                 <div className="footer-title">
                     <div className="footer-title-left">
-                        <img className="navbar-logo-image" src={images_logo} alt="" />
-                        <h1 className="navbar-logo-text">Chery-Setiabudi</h1>
+                        <img className="footer-navbar-logo-image" src={images_logo} alt="" />
+                        <h1 className="footer-navbar-logo-text">Chery-Setiabudi</h1>
                     </div>
                     <div className="footer-title-right">
                         <div className="footer-title-right">
@@ -34,7 +34,7 @@ const Container_Footer = () => {
                 </div>
                 <div className="footer-detail">
                     <div className="footer-detail-left">
-                        <div className="footer-detail-title">Kantor Chery Inti Bandung</div>
+                        <h3 className="footer-detail-title">Kantor Chery Inti Bandung</h3>
                             <div className="footer-detail-address">
                             <p>Jl. Dr. Setiabudi No.65, Gegerkalong, Kec. Sukasari, Kota Bandung, Jawa Barat 40153</p>
                             <a 
@@ -48,11 +48,32 @@ const Container_Footer = () => {
                         </div>
                     </div>
                     
-                    <div className="footer-detail-right">
-                        <div className="footer-detail-title">Model</div>
+                    <div className="footer-detail-center">
+                        <h3 className="footer-detail-title">Model</h3>
                         <div className="footer-detail-links">
                             <a href="#" className="footer-link">TIGGO</a>
                             <a href="#" className="footer-link">OMODA</a>
+                        </div>
+                    </div>
+                    <div className="footer-detail-right">
+                        <div className="footer-detail-right-wrapper">
+                            <h3 className="footer-detail-title">Kontak</h3>
+                            <div className="footer-social-item">
+                                <FaEnvelope className="footer-icon" />
+                                <a href="mailto:example@example.co.id" className="footer-link">Email</a>
+                            </div>
+                            <div className="footer-social-item">
+                                <FaInstagram className="footer-icon" />
+                                <a href="https://instagram.com/example" target="_blank" rel="noopener noreferrer" className="footer-link">
+                                Instagram
+                                </a>
+                            </div>
+                            <div className="footer-social-item">
+                                <FaLinkedin className="footer-icon" />
+                                <a href="https://linkedin.com/company/example" target="_blank" rel="noopener noreferrer" className="footer-link">
+                                LinkedIn
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
