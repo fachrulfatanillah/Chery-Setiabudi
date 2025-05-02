@@ -1,5 +1,5 @@
 import './Services.css';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaHandHoldingHeart  } from 'react-icons/fa';
 import { HiOutlineDevicePhoneMobile, HiOutlineChatBubbleLeftRight  } from "react-icons/hi2";
 import { TbHomeCog, TbMoodHappy, TbClock24   } from "react-icons/tb";
@@ -15,6 +15,8 @@ import sale_3 from "../../assets/sale/Sale-3.webp";
 import sale_4 from "../../assets/sale/Sale-4.webp";
 import sale_5 from "../../assets/sale/Sale-5.webp";
 
+import Loader from "../../components/loader/Loader";
+
 const Services = () => {
   return <ContainerServices />;
 };
@@ -22,6 +24,20 @@ const Services = () => {
 const ContainerServices = () => {
   const itemsRef = useRef([]);
   const scrollContainerRef = useRef(null);
+
+  const [isLoading, setIsLoading] = useState(true);
+  
+  const handleImageLoad = () => {
+    checkAllAssetsLoaded();
+  };
+      
+  const handleVideoCanPlay = () => {
+    checkAllAssetsLoaded();
+  };
+      
+  const checkAllAssetsLoaded = () => {
+    setIsLoading(false);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -67,6 +83,7 @@ const ContainerServices = () => {
     <>
       {/* Container Services */}
       <div className="container-services">
+        {isLoading && <Loader />}
         <div className="section-services">
 
           <div className="services-header">
@@ -91,6 +108,7 @@ const ContainerServices = () => {
                       src={service.image}
                       alt={service.title}
                       className="service-image"
+                      onLoad={handleImageLoad}
                     />
                   </div>
                   <div className="service-description">
@@ -118,13 +136,13 @@ const ContainerServices = () => {
 
             <div className="body-promotion">
                 <div className="promotion-card">
-                    <img src={banner_ommoda5} alt="Promotion 1" className="promotion-image" />
+                    <img src={banner_ommoda5} alt="Promotion 1" className="promotion-image" onLoad={handleImageLoad}/>
                     <h3>Promotion Title 1</h3>
                     <p>This is a description for promotion 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
 
                 <div className="promotion-card">
-                    <img src={banner_ommoda5} alt="Promotion 2" className="promotion-image" />
+                    <img src={banner_ommoda5} alt="Promotion 2" className="promotion-image" onLoad={handleImageLoad}/>
                     <h3>Promotion Title 2</h3>
                     <p>This is a description for promotion 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
@@ -144,19 +162,19 @@ const ContainerServices = () => {
                 <div className="body-guaranted-service">
                 
                     <div className="guaranted-card">
-                        <img src={garansi_mesin} alt="Guarantee 1" className="guaranted-image" /> 
+                        <img src={garansi_mesin} alt="Guarantee 1" className="guaranted-image" onLoad={handleImageLoad}/> 
                         <h3>Garansi Mesin</h3>
                         <p>PT Chery Sales Indonesia berkomitmen memberikan garansi 6 tahun atau 150.000 km untuk kerusakan unit akibat kesalahan produksi bagi seluruh pengguna Chery di Indonesia.</p>
                     </div>
 
                     <div className="guaranted-card">
-                        <img src={garansi_unit} alt="Guarantee 1" className="guaranted-image" />
+                        <img src={garansi_unit} alt="Guarantee 1" className="guaranted-image" onLoad={handleImageLoad}/>
                         <h3>Garansi Unit</h3>
                         <p>PT Chery Sales Indonesia memberikan garansi khusus mesin selama 10 tahun atau 1.000.000 km untuk mesin seri TIGGO yang mengalami kerusakan akibat kesalahan produksi.</p>
                     </div>
 
                     <div className="guaranted-card">
-                        <img src={service_gratis} alt="Guarantee 1" className="guaranted-image" />
+                        <img src={service_gratis} alt="Guarantee 1" className="guaranted-image" onLoad={handleImageLoad}/>
                         <h3>Servis Gratis</h3>
                         <p>PT Chery Sales Indonesia menjamin layanan servis gratis di seluruh bengkel resmi Chery Indonesia selama 4 tahun atau 60.000 km bagi seluruh pengguna mobil Chery Indonesia.</p>
                     </div>
