@@ -38,7 +38,7 @@ const Container_Home = ({}) => {
     };
     
     const checkAllAssetsLoaded = () => {
-        setIsLoading(true);
+        setIsLoading(false);
     };
 
     const carList = [
