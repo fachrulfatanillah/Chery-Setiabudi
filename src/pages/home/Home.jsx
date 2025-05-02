@@ -24,7 +24,7 @@ const Home = ({}) => {
 
 const Container_Home = ({}) => {
     const scrollRef = useRef();
-    const [currentIndex, setCurrentIndex] = useState(0); // Untuk melacak indeks card yang ditampilkan
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const carList = [
         { name: "OMODA 5", image: omoda_5 },
@@ -51,7 +51,7 @@ const Container_Home = ({}) => {
             <div className="hero-section-home">
                 <div className="hero-left-section">
                     <video className="hero-video" autoPlay loop muted>
-                        <source src="vidio/chery-tiggo-homepage-desktop.mp4" type="video/mp4" />
+                        <source src="https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/product-models/tiggo/chery-tiggo-homepage-desktop.mp4" type="video/mp4" />
                     </video>
                     <div className="hero-video-button-wrapper">
                         <button className="home-wrapper-hero-button">
@@ -61,7 +61,7 @@ const Container_Home = ({}) => {
                 </div>
                 <div className="hero-right-section">
                     <video className="hero-video" autoPlay loop muted>
-                            <source src="vidio/chery-omoda-homepage-desktop.mp4" type="video/mp4" />
+                            <source src="https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/product-models/omoda/chery-omoda-homepage-desktop.mp4" type="video/mp4" />
                     </video>
                     <div className="hero-video-button-wrapper">
                         <button className="home-wrapper-hero-button">
