@@ -70,7 +70,7 @@ const Container_Contact = () => {
                   title="Email"
                 >
                   <FaEnvelope size={28} color="#ffffff" />
-                  <span className="contact-icon-text">mfaarellrafi@gmail.com</span>
+                  <span className="contact-icon-text">faarellrafi@gmail.com</span>
                 </a>
               </div>
 

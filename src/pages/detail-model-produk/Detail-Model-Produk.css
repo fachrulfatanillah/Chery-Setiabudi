@@ -4,7 +4,7 @@
 .container-detail-model-produk {
     display: flex;
     justify-content: center;
-    background-color: #5f5f5fd3;
+    /* background-color: #5f5f5fd3; */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-top: 4em;
     min-width: 100%;
@@ -19,7 +19,7 @@
 
 .section-detail-model-produk img {
     width: 100%;
-    height: 92vh;
+    height: 93vh;
     display: block;
     object-fit: cover;
 }
@@ -204,6 +204,7 @@
     height: 100%;
     object-fit: cover;
 }
+
 .specific-model-produk {
     position: absolute;
     top: 55vh;
@@ -257,7 +258,8 @@
     letter-spacing: 3px;
 }
 
-/* ============================= */
+  
+/* === Detail Interior Produk === */
 .container-detail-interior-model-produk {
     width: 100%;
     min-height: 100vh;
@@ -573,6 +575,7 @@
     right: 10px;
 }
   
+/* === Change Color Produk === */
 
 .change-color-produk {
     background: linear-gradient(to bottom, #000000, #3e3e3e);
@@ -644,3 +647,323 @@
     font-weight: 400;
     margin-bottom: 32px;
 }
+
+/* === Dinamika - Keamanan Produk === */
+
+.dinamika-keamanan-produk {
+    width: 100%;
+    min-height: 95vh;
+    background-color: #000000;
+    color: #fff;
+    padding: 60px 20px;
+}
+  
+.container-dinamika-keamanan-produk {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    /* background-color: aquamarine; */
+}
+ 
+/* HEADER */
+.head-dinamika-keamanan {
+    text-align: center;
+    color: white;
+    padding: 1.5rem 2rem;
+    /* margin-bottom: 2rem; */
+}
+  
+.head-dinamika-keamanan h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+  
+.head-dinamika-keamanan p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+  
+/* BODY */
+.body-dinamika-keamanan-produk {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 20px;
+    /* background-color: aqua; */
+}
+  
+.section-dinamika-keamanan-left {
+    flex: 1;
+    min-width: 200px;
+    /* background-color: pink; */
+}
+  
+/* FITUR LIST */
+.fitur-keamanan-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 30px;
+    position: relative;
+}
+  
+.fitur-keamanan-list li {
+    position: relative;
+    padding: 20px 0 20px 30px;
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #aaa;
+    cursor: pointer;
+}
+  
+/* BULLET */
+.fitur-keamanan-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #7d7d7d;
+    border-radius: 50%;
+    z-index: 2;
+}
+  
+/* GARIS VERTIKAL */
+.fitur-keamanan-list li::after {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #7d7d7d;
+    z-index: 1;
+}
+  
+.fitur-keamanan-list li:first-child::after {
+    top: 50%;
+    height: 50%;
+}
+  
+.fitur-keamanan-list li:last-child::after {
+    height: 50%;
+}
+  
+.fitur-keamanan-list li.active {
+    color: #fff;
+    font-weight: 400;
+}
+  
+.fitur-keamanan-list li.active::before {
+    background-color: #fff;
+}
+  
+  
+  
+/* IMAGE SECTION */
+.section-dinamika-keamanan-right {
+    flex: 1;
+    min-width: 750px;
+    height: 490px;
+    text-align: center;
+    /* background-color: #2a5298; */
+}
+  
+.img-keamanan {
+    width: 100%;
+    max-width: 900px;
+}
+ 
+/* === Varian Detail- Produk === */
+
+.varian-detail-produk {
+    width: 100%;
+    min-height: 90vh;
+    background-color: #000000; 
+    padding: 80px 20px;
+    color: white;
+}
+  
+.head-varian-detail-produk {
+    text-align: center;
+    margin-bottom: 60px;
+}
+  
+.head-varian-detail-produk h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+  
+.body-varian-detail-produk {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+  
+.varian-box {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+  
+.varian-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+  
+.varian-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+    width: 100%;
+}
+  
+.varian-info {
+    text-align: left;
+    width: 60%; 
+    padding-left: 3.2rem; 
+    /* background-color: red */
+}
+  
+.varian-title {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    /* background-color: red; */
+}
+  
+.varian-label {
+    font-size: 0.8rem;
+    color: #ccc;
+    /* margin-bottom: 0.2=rem; */
+    display: block;
+}
+  
+.varian-price {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+  
+.varian-otr {
+    font-size: 0.7rem;
+    color: #aaa;
+}
+  
+.varian-specs {
+    text-align: left;
+    width: 30%; 
+    padding-left: 1rem;
+    margin-left: -3rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    /* background-color: aqua; */
+}
+  
+.spec-label {
+    margin: 1rem 0 1rem 0;
+}
+  
+.varian-specs ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+  
+.varian-specs li {
+    list-style: disc;
+    margin-bottom: 1rem;
+}
+
+/* === Table Specification === */
+.table-specification {
+    width: 100%;
+    min-height: 80vh;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+  
+.container-table-specification {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.head-table-specification {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+  
+.head-table-specification h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+  
+.body-table-specification {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+  
+.spec-section {
+    border-top: 1px solid #888;
+    padding: 0.8rem 0;
+}
+  
+.spec-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding-right: 1rem;
+    margin-bottom: -1rem;
+}
+  
+.spec-title .icon {
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+  
+.spec-content {
+    padding: 1rem 0;
+}
+  
+.spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem 2rem;
+}
+  
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #555;
+    padding-bottom: 0.4rem;
+}
+  
+.spec-label {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #bbb;
+}
+  
+.spec-value {
+    font-weight: 400;
+    font-size: 0.85rem;
+    text-align: right;
+    color: white;
+    margin-top: 1rem;
+}
+  
