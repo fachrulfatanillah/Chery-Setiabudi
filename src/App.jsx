@@ -12,7 +12,7 @@ import NotFound from './components/notfound/NotFound'
 import Maintenance from './components/maintance/Maintenance'
 
 function App() {
-  const isMaintenance = true;
+  const isMaintenance = import.meta.env.VITE_IS_MAINTENANCE === 'true';
 
   if (isMaintenance) {
     return <Maintenance />
