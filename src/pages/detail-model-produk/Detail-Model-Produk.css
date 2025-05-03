@@ -286,7 +286,6 @@
     width: 100%;
     text-align: center;
     padding: 1rem 2rem;
-    /* background: linear-gradient(to right, #2c3e50, #4ca1af); */
     color: white;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -412,116 +411,104 @@
     border: 2px solid #ffffff;
 }
 
-/* === Swiper Interior Produk === */
+/* === Perbaikan === */
 
-/* Container */
-.interior-carousel {
+.interior-dalam-model-produk {
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: #000000;
     padding: 2rem 1rem;
-    box-sizing: border-box;
+    background-color: #000000;
 }
   
-.interior-carousel-section {
+.container-interior-dalam-model-produk {
     width: 100%;
-    max-width: 1500px;
-    /* background-color: #d32c2c; */
+    max-width: 1200px;
     border-radius: 12px;
     padding: 2rem;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 }
   
-/* Header */
-.interior-carousel-header {
+.head-interior-dalam-model-produk {
+    width: 100%;
     text-align: center;
-    /* background: linear-gradient(to right, #1e3c72, #2a5298); */
+    padding: 1rem 2rem;
     color: white;
     border-radius: 12px;
-    padding: 1.5rem 2rem;
-    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
   
-.interior-carousel-header h2 {
+.head-interior-dalam-model-produk h2 {
     font-size: 2.5em;
     font-weight: 600;
-    margin: 0;
-    letter-spacing: 1px;
+    margin-bottom: 16px;
 }
   
-.interior-carousel-header p {
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-    color: #ecf0f1;
+.head-interior-dalam-model-produk p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 24px;
+    line-height: 1.6;
 }
   
-/* Body */
-.interior-carousel-body {
+.body-interior-dalam-model-produk {
     width: 100%;
-    height: 65vh;
-    position: relative;
+    height: 95%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    /* background-color: #00ffff; */
-}
-
-.interior-carousel-wrapper {
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
     position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-    /* background-color: #70b010; */
-    border-radius: 12px;
 }
   
-  
-.interior-carousel-track {
+.interior-dalam-model-produk-geser {
+    flex: 1;
+    width: 100%;
     display: flex;
-    transition: transform 0.5s ease;
-    gap: 20px;
-    padding: 1rem 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
   
-/* Slide */
-.interior-carousel-slide {
-    flex: 0 0 auto;
-    width: 918px;
-    height: 500px;
-    opacity: 0.4;
-    transform: scale(0.9);
-    transition: all 0.4s ease;
-    position: relative;
+.item-interior-dalam-model {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    gap: 0.75rem;
+    text-align: center;
 }
   
-.interior-carousel-slide.active {
-    opacity: 1;
-    transform: scale(1);
-    z-index: 1;
-}
-  
-.interior-carousel-slide img {
+.item-interior-dalam-model img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     border-radius: 12px;
+    object-fit: cover;
 }
   
-.slide-label {
-    position: absolute;
-    bottom: 25px;
-    left: 30px;
+.label-interior-dalam {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    max-width: 80%;
     color: white;
-    font-size: 2.5em;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
   
-/* Navigation Buttons */
-.hex-button-interior-carousel {
+.label-interior-dalam p {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #ffffff;
+    border-radius: 8px;
+    white-space: nowrap;
+    margin: 0;
+}
+  
+.hex-button-interior-dalam-model {
     background: #444;
     color: white;
     width: 65px;
@@ -537,11 +524,22 @@
     justify-content: center;
     cursor: pointer;
     transition: background 0.3s ease;
-    z-index: 1;
+    z-index: 2;
     overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
-.hex-button-interior-carousel::before {
+  
+.hex-button-interior-dalam-model.kiri {
+    left: -1.5rem;
+}
+  
+.hex-button-interior-dalam-model.kanan {
+    right: -1.5rem;
+}
+  
+.hex-button-interior-dalam-model::before {
     content: '';
     position: absolute;
     top: 0.8px;
@@ -553,27 +551,20 @@
     z-index: 0;
     border-radius: inherit;
 }
-
-.icon-swipe-interior-carousel {
+  
+.icon-interior-dalam-model {
     z-index: 2;
     position: relative;
     color: white;
     transition: transform 0.3s ease;
 }
   
-.hex-button-interior-carousel:hover {
+.hex-button-interior-dalam-model:hover {
     background: #8f8f8f;
 }
   
-.hex-button-interior-carousel.left {
-    position: absolute;
-    left: 10px;
-}
   
-.hex-button-interior-carousel.right {
-    position: absolute;
-    right: 10px;
-}
+
   
 /* === Change Color Produk === */
 

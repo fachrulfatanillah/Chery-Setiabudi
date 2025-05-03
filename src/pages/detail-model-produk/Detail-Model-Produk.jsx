@@ -71,66 +71,32 @@ const Container_Detail_Model_Produk = () => {
         setCurrentImageIndex((prev) => (prev - 1 + interiorImages.length) % interiorImages.length);
     };
 
+    {/* Prbaikan */}
     const interiorItems = [
-        {
-          image: Interior_Produk1,
-          label: "TC Sunroof",
-        },
-        {
-          image: Interior_Produk2,
-          label: "TC AC + Filter Baris Pertama",
-        },
-        {
-          image: Interior_Produk3,
-          label: "TC Kipas AC Baris Kedua",
-        },
-        {
-          image: Interior_Produk4,
-          label: "TC Rem Parkir Elektrik",
-        },
-        {
-          image: Interior_Produk5,
-          label: "Push Start Stop Engine",
-        },
-        {
-          image: Interior_Produk6,
-          label: "Material Premium yang Lembut",
-        },
-        {
-          image: Interior_Produk7,
-          label: "TC Interior",
-        },
-        {
-          image: Interior_Produk8,
-          label: "Power Outlet Lengkap",
-        },
-        {
-          image: Interior_Produk9,
-          label: "All Power Window",
-        },
-        {
-          image: Interior_Produk10,
-          label: "Ambient Light",
-        },
+        { image: Interior_Produk1, label: "TC Sunroof" },
+        { image: Interior_Produk2, label: "TC AC + Filter Baris Pertama" },
+        { image: Interior_Produk3, label: "TC Kipas AC Baris Kedua" },
+        { image: Interior_Produk4, label: "TC Rem Parkir Elektrik" },
+        { image: Interior_Produk5, label: "Push Start Stop Engine" },
+        { image: Interior_Produk6, label: "Material Premium yang Lembut" },
+        { image: Interior_Produk7, label: "TC Interior" },
+        { image: Interior_Produk8, label: "Power Outlet Lengkap" },
+        { image: Interior_Produk9, label: "All Power Window" },
+        { image: Interior_Produk10, label: "Ambient Light" },
     ];
-      
+    
     const [currentIndex, setCurrentIndex] = useState(0);
-      
+
     const handlePrev = () => {
         setCurrentIndex((prev) => (prev === 0 ? interiorItems.length - 1 : prev - 1));
     };
-      
+
     const handleNext = () => {
         setCurrentIndex((prev) => (prev === interiorItems.length - 1 ? 0 : prev + 1));
     };
 
-    const slideWidth = 918;
-    const slideGap = 20;
-
-    const trackStyle = {
-    transform: `translateX(calc(50% - ${currentIndex * (slideWidth + slideGap)}px - ${slideWidth / 2}px))`,
-    };
-
+    /*====================================*/
+    
     const colors = [
         { name: 'RED RUBY', colorCode: '#a20000', image: RedImage },
         { name: 'SILVER MOONLIGHT', colorCode: '#c0c0c0', image: SilverImage },
@@ -405,41 +371,40 @@ const Container_Detail_Model_Produk = () => {
                 </div>
             </div>
             
-            {/* Interior-carousel */}
-            <div className="interior-carousel">
-                <div className="interior-carousel-section">
-                    <div className="interior-carousel-header">
-                        <h2>KESEMPURNAAN PENGALAMAN </h2>
+            {/* Perbaikan */}
+            <div className="interior-dalam-model-produk">
+                <div className="container-interior-dalam-model-produk">
+                    <div className="head-interior-dalam-model-produk">
+                        <h2>KESEMPURNAAN PENGALAMAN</h2>
                         <h2>BERKENDARA</h2>
                         <p>Bersiaplah untuk dimanjakan dengan interior mewah dan futuristik dari TIGGO Cross.</p>
                     </div>
 
-                    <div className="interior-carousel-body">
-                        <button className="hex-button-interior-carousel left" onClick={handlePrev}>
-                                <FaChevronLeft className='icon-swipe-interior-carousel' size={18} />
+                    <div className="body-interior-dalam-model-produk">
+                        <button className="hex-button-interior-dalam-model kiri" onClick={handlePrev}>
+                            <FaChevronLeft className="icon-interior-dalam-model" />
                         </button>
 
-                        <div className="interior-carousel-wrapper">
-                            <div className="interior-carousel-track" style={trackStyle}>
-                                {interiorItems.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className={`interior-carousel-slide ${index === currentIndex ? "active" : ""}`}
-                                >
-                                    <img src={item.image} alt={item.label} />
-                                    <div className="slide-label">{item.label}</div>
+                        <div className="interior-dalam-model-produk-geser">
+                            <div className="item-interior-dalam-model">
+                                <img
+                                    src={interiorItems[currentIndex].image}
+                                    alt={interiorItems[currentIndex].label}
+                                />
+                                <div className="label-interior-dalam">
+                                    <p>{interiorItems[currentIndex].label}</p>
                                 </div>
-                                ))}
                             </div>
                         </div>
 
-
-                        <button className="hex-button-interior-carousel right" onClick={handleNext}>
-                            <FaChevronRight className='icon-swipe-interior-carousel' size={18} />
+                        <button className="hex-button-interior-dalam-model kanan" onClick={handleNext}>
+                            <FaChevronRight className="icon-interior-dalam-model" />
                         </button>
                     </div>
                 </div>
             </div>
+
+
 
 
             {/* change-color */}                    
