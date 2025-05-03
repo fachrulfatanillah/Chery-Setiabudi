@@ -24,10 +24,11 @@
 }
 
 .navbar-logo-text {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
+    font-family: var(--font-primary);
 }
 
 /* NAVBAR-Menu */
@@ -37,6 +38,7 @@
     margin: 0;
     padding: 0;
     margin-left: auto;
+    font-family: var(--font-primary);
 }
 
 .navbar-menu-item {
@@ -49,8 +51,8 @@
 .navbar-menu-item a {
     text-decoration: none;
     color: #fff;
-    font-size: 1em;
-    font-weight: normal;
+    font-size: 1.1em;
+    font-weight: 700;
     padding: 10px;
 }
 
@@ -260,7 +262,7 @@
 
 /* Submenu Title */
 .submenu-title {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
 }

@@ -85,6 +85,8 @@
     height: 12%;
     padding: 1rem 1rem;
     color: white;
+    font-family: var(--font-primary);
+    text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     display: flex;
@@ -96,6 +98,7 @@
     position: relative;
     display: inline-block;
     color: white;
+    font-family: var(--font-primary);
     font-size: 2.2rem;
     font-weight: bold;
     padding-bottom: 1rem;
@@ -179,7 +182,8 @@
 
 .home-section-list-product-card-detail-title h3 {
     font-size: 1.6em;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: var(--font-primary);
 }
 
 /* price */
@@ -190,7 +194,8 @@
     align-items: center;
     padding: 0.5em 0em;
     border-radius: 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-family: var(--font-primary);
 }
 
 .home-section-list-product-card-price .price-info {
@@ -223,7 +228,8 @@
 /* detail product */
 .home-section-list-product-card-detail {
     margin-top: 0.5em;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-family: var(--font-primary);
 }
 
 .home-section-list-product-card-detail > span {
@@ -281,6 +287,7 @@
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    font-family: var(--font-primary);
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -296,6 +303,7 @@
     border: none;
     border-radius: 8px;
     padding: 0.7em 1em;
+    font-family: var(--font-primary);
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;

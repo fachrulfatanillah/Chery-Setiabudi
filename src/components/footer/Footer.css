@@ -32,7 +32,9 @@
 }
 
 .footer-navbar-logo-text {
-    font-size: 1.4em;
+    font-family: var(--font-primary);
+    font-size: 1.5em;
+    text-transform: uppercase;
     color: white;
 }
 
@@ -55,7 +57,8 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-family: var(--font-primary);
+    font-size: 1.4rem;
     transition: color 0.3s ease;
 }
 
@@ -92,8 +95,10 @@
 }
 
 .footer-detail-title {
+    font-family: var(--font-primary);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
     color: white;
     margin-bottom: 0.5em;
 }
@@ -119,7 +124,7 @@
 .footer-detail-address p {
     margin: 0;
     color: #cccccc;
-    font-size: 0.9rem;
+    font-size: 1.1em;
 }
 
 .footer-detail-right {
@@ -140,7 +145,7 @@
 }
   
 .footer-icon {
-    font-size: 1.2rem;
+    font-size: 1.2em;
     color: white;
 }
   

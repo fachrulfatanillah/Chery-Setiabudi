@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600&display=swap');
+
+:root {
+  --font-primary: 'Oxanium', Arial, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
