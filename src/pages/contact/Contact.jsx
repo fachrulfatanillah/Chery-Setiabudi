@@ -1,16 +1,34 @@
 import './Contact.css';
+import React, { useState } from "react";
 import { FaWhatsapp, FaEnvelope, FaStar, FaCheckCircle } from 'react-icons/fa';
 
 import images_profile from "../../assets/foto/Profile.webp";
 import background_contact from "../../assets/background/BackgroundContact.webp"; 
+
+import Loader from "../../components/loader/Loader";
 
 const Contact = () => {
   return <Container_Contact />;
 };
 
 const Container_Contact = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  
+  const handleImageLoad = () => {
+    checkAllAssetsLoaded();
+  };
+      
+  const handleVideoCanPlay = () => {
+      checkAllAssetsLoaded();
+  };
+      
+  const checkAllAssetsLoaded = () => {
+      setIsLoading(false);
+  };
+
   return (
     <div className="contact-container">
+      {isLoading && <Loader />}
       <div
         className="contact-section"
         style={{
@@ -30,6 +48,7 @@ const Container_Contact = () => {
                 src={images_profile}
                 alt="Foto Profil"
                 className="contact-profile-photo"
+                onLoad={handleImageLoad}
               />
             </div>
 

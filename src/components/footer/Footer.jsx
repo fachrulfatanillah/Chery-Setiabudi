@@ -1,6 +1,6 @@
 import "./Footer.css"
 
-import { FaPhoneAlt, FaEnvelope, FaInstagram, FaLinkedin  } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaInstagram, FaTiktok  } from "react-icons/fa";
 import images_logo from "../../assets/logo/Chery_logo.png";
 
 const Footer = () => {
@@ -64,14 +64,14 @@ const Container_Footer = () => {
                             </div>
                             <div className="footer-social-item">
                                 <FaInstagram className="footer-icon" />
-                                <a href="https://instagram.com/example" target="_blank" rel="noopener noreferrer" className="footer-link">
+                                <a href="https://www.instagram.com/cherysetiabudi.id?igsh=MXN4NjV1dGI2cGs4cw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="footer-link">
                                 Instagram
                                 </a>
                             </div>
                             <div className="footer-social-item">
-                                <FaLinkedin className="footer-icon" />
-                                <a href="https://linkedin.com/company/example" target="_blank" rel="noopener noreferrer" className="footer-link">
-                                LinkedIn
+                                <FaTiktok className="footer-icon" />
+                                <a href="https://www.tiktok.com/@cheryintisetiabudi8?_t=ZS-8vzuzCTxxII&_r=1" target="_blank" rel="noopener noreferrer" className="footer-link">
+                                    TikTok
                                 </a>
                             </div>
                         </div>

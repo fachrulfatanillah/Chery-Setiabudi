@@ -16,6 +16,8 @@ import tiggo_8_pro from "../../assets/cars/tiggo/TIGGO-8-PRO.webp";
 import tiggo_8 from "../../assets/cars/tiggo/TIGGO-8.webp";
 import tiggo_cross from "../../assets/cars/tiggo/TIGGO-CROSS.webp";
 
+import Loader from "../../components/loader/Loader";
+
 const Home = ({}) => {
     return (
         <Container_Home/>
@@ -24,7 +26,20 @@ const Home = ({}) => {
 
 const Container_Home = ({}) => {
     const scrollRef = useRef();
-    const [currentIndex, setCurrentIndex] = useState(0); // Untuk melacak indeks card yang ditampilkan
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
+
+    const handleImageLoad = () => {
+        checkAllAssetsLoaded();
+    };
+    
+    const handleVideoCanPlay = () => {
+        checkAllAssetsLoaded();
+    };
+    
+    const checkAllAssetsLoaded = () => {
+        setIsLoading(false);
+    };
 
     const carList = [
         { name: "OMODA 5", image: omoda_5 },
@@ -48,24 +63,25 @@ const Container_Home = ({}) => {
 
     return (
         <section className="section-home">
+            {isLoading && <Loader />}
             <div className="hero-section-home">
                 <div className="hero-left-section">
                     <video className="hero-video" autoPlay loop muted>
-                        <source src='https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/product-models/tiggo/chery-tiggo-homepage-desktop.mp4' type="video/mp4" />
+                        <source src="https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/product-models/tiggo/chery-tiggo-homepage-desktop.mp4" type="video/mp4" onCanPlay={handleVideoCanPlay}/>
                     </video>
                     <div className="hero-video-button-wrapper">
                         <button className="home-wrapper-hero-button">
-                            <img className="image-home-wrapper-hero-button" src={images_tiggo_logo} alt="" />
+                            <img className="image-home-wrapper-hero-button" src={images_tiggo_logo} alt="" onLoad={handleImageLoad}/>
                         </button>
                     </div>
                 </div>
                 <div className="hero-right-section">
                     <video className="hero-video" autoPlay loop muted>
-                            <source src="https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/product-models/omoda/bg-video-placeholder-desktop.webphttps://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/product-models/omoda/chery-omoda-homepage-desktop.mp4" type="video/mp4" />
+                            <source src="https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/product-models/omoda/chery-omoda-homepage-desktop.mp4" type="video/mp4" onCanPlay={handleVideoCanPlay}/>
                     </video>
                     <div className="hero-video-button-wrapper">
                         <button className="home-wrapper-hero-button">
-                            <img className="image-home-wrapper-hero-button" src={images_omoda_logo} alt="" />
+                            <img className="image-home-wrapper-hero-button" src={images_omoda_logo} alt="" onLoad={handleImageLoad}/>
                         </button>
                     </div>
                 </div>
@@ -91,7 +107,7 @@ const Container_Home = ({}) => {
                             className="main-content-home-section-list-product-card"
                             key={index}>
                                 <div className="main-content-home-section-list-product-card-image">
-                                    <img className="main-content-home-section-list-product-card-img" src={car.image} alt={car.name} />
+                                    <img className="main-content-home-section-list-product-card-img" src={car.image} alt={car.name} onLoad={handleImageLoad}/>
                                 </div>
                                 <div className="main-content-home-section-list-product-card-detail-wrapper">
                                     <div className="home-section-list-product-card-detail-title">
@@ -123,7 +139,19 @@ const Container_Home = ({}) => {
                                         </ul>
                                     </div>
                                     <div className="home-section-list-product-card-button-wrapper">
-                                        <button className="home-section-list-product-card-button-wrapper-btn-download">Unduh Brosur</button>
+                                        <button
+                                            className="home-section-list-product-card-button-wrapper-btn-download"
+                                            onClick={() => {
+                                                const link = document.createElement("a");
+                                                link.href = "/brochure/_DSF1-Chery-brosur-daftar-harga.png";
+                                                link.download = "_DSF1-Chery-brosur-daftar-harga.png";
+                                                document.body.appendChild(link);
+                                                link.click();
+                                                document.body.removeChild(link);
+                                            }}
+                                            >
+                                            Unduh Brosur
+                                        </button>
                                         <button className="home-section-list-product-card-button-wrapper-btn-detail">
                                             <span className="text-underline">Lihat Detail</span>
                                         </button>
