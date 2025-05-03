@@ -139,7 +139,19 @@ const Container_Home = ({}) => {
                                         </ul>
                                     </div>
                                     <div className="home-section-list-product-card-button-wrapper">
-                                        <button className="home-section-list-product-card-button-wrapper-btn-download">Unduh Brosur</button>
+                                        <button
+                                            className="home-section-list-product-card-button-wrapper-btn-download"
+                                            onClick={() => {
+                                                const link = document.createElement("a");
+                                                link.href = "/brochure/_DSF1-Chery-brosur-daftar-harga.png";
+                                                link.download = "_DSF1-Chery-brosur-daftar-harga.png";
+                                                document.body.appendChild(link);
+                                                link.click();
+                                                document.body.removeChild(link);
+                                            }}
+                                            >
+                                            Unduh Brosur
+                                        </button>
                                         <button className="home-section-list-product-card-button-wrapper-btn-detail">
                                             <span className="text-underline">Lihat Detail</span>
                                         </button>
