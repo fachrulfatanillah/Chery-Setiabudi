@@ -9,8 +9,14 @@ import Footer from './components/footer/Footer'
 import WhatsAppButton from './components/whatsapp/WhatsAppButton'
 import Detail_Model_Produk from './pages/detail-model-produk/Detail-Model-Produk'
 import NotFound from './components/notfound/NotFound'
+import Maintenance from './components/maintance/Maintenance'
 
 function App() {
+  const isMaintenance = true;
+
+  if (isMaintenance) {
+    return <Maintenance />
+  }
 
   return (
     <Router>
