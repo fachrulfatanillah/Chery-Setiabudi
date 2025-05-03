@@ -1,15 +1,43 @@
 .maintenance-container {
     text-align: center;
-    margin-top: 20%;
+    padding: 2rem;
+    margin-top: 20vh;
     font-family: Arial, sans-serif;
+  }
+
+  .maintenance-icon {
+    font-size: 3rem;
+    color: #000000;
+    margin-bottom: 1rem;
   }
   
   .maintenance-container h1 {
-    font-size: 2rem;
-    color: #ff9900;
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
   }
   
   .maintenance-container p {
     font-size: 1.2rem;
     color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .maintenance-container h1 {
+      font-size: 1.4rem;
+    }
+  
+    .maintenance-container p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .maintenance-container h1 {
+      font-size: 1.2rem;
+    }
+  
+    .maintenance-container p {
+      font-size: 0.9rem;
+    }
   }
