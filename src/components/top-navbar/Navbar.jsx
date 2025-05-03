@@ -136,7 +136,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-logo">
                 <img className="navbar-logo-image" src={images_logo} alt="" />
-                <h1 className="navbar-logo-text">Chery-Setiabudi</h1>
+                <h1 className="navbar-logo-text">Chery Setiabudi</h1>
             </div>
             <button className={`menu-toggle ${menuOpen ? "show" : ""}`} onClick={toggleMenu}></button>
             <ul className={`navbar-menu ${menuOpen ? "show" : ""}`}>

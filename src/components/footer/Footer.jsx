@@ -16,7 +16,7 @@ const Container_Footer = () => {
                 <div className="footer-title">
                     <div className="footer-title-left">
                         <img className="footer-navbar-logo-image" src={images_logo} alt="" />
-                        <h1 className="footer-navbar-logo-text">Chery-Setiabudi</h1>
+                        <h1 className="footer-navbar-logo-text">Chery Setiabudi</h1>
                     </div>
                     <div className="footer-title-right">
                         <div className="footer-title-right">
@@ -60,7 +60,7 @@ const Container_Footer = () => {
                             <h3 className="footer-detail-title">Kontak</h3>
                             <div className="footer-social-item">
                                 <FaEnvelope className="footer-icon" />
-                                <a href="mailto:example@example.co.id" className="footer-link">Email</a>
+                                <a href="mailto:faarellrafi@gmail.com" className="footer-link">Email</a>
                             </div>
                             <div className="footer-social-item">
                                 <FaInstagram className="footer-icon" />
